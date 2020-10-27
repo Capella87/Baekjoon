@@ -1,4 +1,4 @@
-// 백준 2511번 문제:: 카드놀이
+// 백준 2511번 문제 : 카드놀이
 // https://www.acmicpc.net/problem/2511
 
 #include <stdio.h>
