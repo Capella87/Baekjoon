@@ -1,5 +1,6 @@
 // 백준 1157번 문제 : 단어 공부
 // https://www.acmicpc.net/problem/1157
+// 알고리즘 분류 : 구현, 문자열
 
 #include <stdio.h>
 #include <string.h>

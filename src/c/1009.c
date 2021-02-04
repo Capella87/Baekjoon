@@ -1,5 +1,6 @@
 // 백준 1009번 문제 : 분산처리
 // https://www.acmicpc.net/problem/1009
+// 알고리즘 분류 : 수학, 구현
 
 #include <stdio.h>
 

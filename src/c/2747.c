@@ -1,5 +1,6 @@
 // 백준 2747번 문제 : 피보나치 수
 // https://www.acmicpc.net/problem/2747
+// 알고리즘 분류 : 수학, 분류
 
 #include <stdio.h>
 

@@ -1,5 +1,6 @@
 // 백준 2511번 문제 : 카드놀이
 // https://www.acmicpc.net/problem/2511
+// 알고리즘 분류 : 구현
 
 #include <stdio.h>
 #define ROUND 10

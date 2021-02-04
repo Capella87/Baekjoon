@@ -1,5 +1,6 @@
 // 백준 2839번 문제 : 설탕 배달
 // https://www.acmicpc.net/problem/2839
+// 알고리즘 분류 : 수학, 다이나믹 프로그래밍, 그리디 알고리즘
 
 #include <stdio.h>
 

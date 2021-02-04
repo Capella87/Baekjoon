@@ -1,5 +1,6 @@
 // 백준 2908번 문제 : 상수
 // https://www.acmicpc.net/problem/2908
+// 알고리즘 분류 : 구현
 
 #include <stdio.h>
 #include <string.h>

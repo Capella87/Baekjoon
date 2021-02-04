@@ -1,5 +1,6 @@
 // 백준 20540번 문제 : 연길이의 이상형
 // https://www.acmicpc.net/problem/20540
+// 알고리즘 분류 : 구현, 문자열
 
 #include <stdio.h>
 #define MBTI 4

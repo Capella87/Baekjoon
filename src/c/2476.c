@@ -1,5 +1,6 @@
 // 백준 2476번 문제 : 주사위
 // https://www.acmicpc.net/problem/2476
+// 알고리즘 분류 : 수학
 
 #include <stdio.h>
 #include <string.h>

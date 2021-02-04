@@ -1,5 +1,6 @@
 # 백준 1914번 문제 : 하노이 탑
 # https://www.acmicpc.net/problem/1914
+# 알고리즘 분류 : 임의 정밀도 / 큰 수 연산, 재귀
 
 import math
 

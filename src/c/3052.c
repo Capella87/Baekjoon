@@ -1,5 +1,6 @@
 // 백준 3052번 문제 : 나머지
 // https://www.acmicpc.net/problem/3052
+// 알고리즘 분류 : 수학, 사칙연산
 
 #include <stdio.h>
 #include <stdbool.h>

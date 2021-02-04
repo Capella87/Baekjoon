@@ -1,5 +1,6 @@
 // 백준 1065번 문제 : 한수
 // https://www.acmicpc.net/problem/1065
+// 알고리즘 분류 : 브루트포스 알고리즘
 
 #include <stdio.h>
 

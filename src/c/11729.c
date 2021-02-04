@@ -1,5 +1,6 @@
 // 백준 11729번 문제 : 하노이 탑 이동 순서
 // https://www.acmicpc.net/problem/11729
+// 알고리즘 분류 : 재귀
 
 #include <stdio.h>
 #include <math.h>

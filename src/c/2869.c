@@ -1,5 +1,6 @@
 // 백준 2869번 문제 : 달팽이는 올라가고 싶다
 // https://www.acmicpc.net/problem/2869
+// 알고리즘 분류 : 수학
 
 #include <stdio.h>
 
