@@ -1,5 +1,6 @@
 // 백준 1712번 문제 : 손익분기점
 // https://www.acmicpc.net/problem/1712
+// 알고리즘 분류 : 수학
 
 #include <stdio.h>
 

@@ -1,5 +1,6 @@
 // 백준 4673번 문제 : 셀프 넘버
 // https://www.acmicpc.net/problem/4673
+// 알고리즘 분류 : 구현
 
 #include <stdio.h>
 #include <stdbool.h>

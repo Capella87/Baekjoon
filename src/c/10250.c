@@ -1,5 +1,6 @@
 // 백준 10250번 문제 : ACM 호텔
 // https://www.acmicpc.net/problem/10250
+// 알고리즘 분류 : 수학, 구현, 사칙연산
 
 #include <stdio.h>
 

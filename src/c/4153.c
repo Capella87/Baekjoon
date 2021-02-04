@@ -1,5 +1,6 @@
 // 백준 4153번 문제 : 직각삼각형
 // https://www.acmicpc.net/problem/4153
+// 알고리즘 분류 : 수학, 기하학
 
 #include <stdio.h>
 

@@ -1,5 +1,6 @@
 // 백준 5622번 문제 : 다이얼
 // https://www.acmicpc.net/problem/5622
+// 알고리즘 분류 : 구현
 
 #include <stdio.h>
 #include <string.h>

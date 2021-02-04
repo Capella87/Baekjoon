@@ -1,5 +1,6 @@
 // 백준 2292번 문제 : 벌집
 // https://www.acmicpc.net/problem/2292
+// 알고리즘 분류 : 수학
 
 #include <stdio.h>
 

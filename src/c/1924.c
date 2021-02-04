@@ -1,3 +1,7 @@
+// 백준 1924번 문제 : 2007년
+// https://www.acmicpc.net/problem/1024
+// 알고리즘 분류 : 구현
+
 #include <stdio.h>
 
 int main(void)

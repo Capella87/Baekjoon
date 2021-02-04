@@ -1,5 +1,6 @@
 // 백준 2675번 문제 : 문자열 반복
 // https://www.acmicpc.net/problem/2675
+// 알고리즘 분류 : 구현
 
 #include <stdio.h>
 #include <string.h>

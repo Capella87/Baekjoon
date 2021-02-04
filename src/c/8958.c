@@ -1,5 +1,6 @@
 // 백준 8958번 문제 : OX퀴즈
 // https://www.acmicpc.net/problem/8958
+// 알고리즘 분류 : 구현, 문자열
 
 #include <stdio.h>
 #include <string.h>
