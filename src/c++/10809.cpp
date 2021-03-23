@@ -1,3 +1,7 @@
+// 백준 10809번 문제 : 알파벳 찾기
+// https://www.acmicpc.net/problem/10809
+// 알고리즘 분류 : 구현, 문자열
+
 #include <iostream>
 #include <iterator>
 #include <string>
