@@ -3,35 +3,23 @@
 // 알고리즘 분류 : 수학, 정수론
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
-    long long n;
-    int count, i, j, temp;
-    int* arr = NULL;
+    // 주어지는 수에 1과 결과로 나오는 수는 없으므로 그 두개 외의 최댓값과 최솟값을 곱하면 된다.
+    int max = -1, min = 1000001;
+    int n, temp;
 
-    scanf("%d", &count);
-    getchar();
-    arr = (int*)malloc(sizeof(int) * count);
-    if (arr == NULL) exit(EXIT_FAILURE);
-    for (i = 0; i < count; i++)
-        scanf("%d", &arr[i]);
-    for (i = 0; i < count - 1; i++)
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++)
     {
-        for (j = 0; j < count - i - 1; j++)
-        {
-            if (arr[j] < arr[j + 1]) // Arrangement
-            {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
+        scanf("%d", &temp);
+        if (max < temp)
+            max = temp;
+        if (min > temp)
+            min = temp;
     }
-    n = (long long)arr[0] * (long long) arr[count - 1]; // Multiply the first element and the last element
-    printf("%lld\n", n);
+    printf("%d\n", min * max); // 최댓값과 최솟값을 곱한 값 출력
 
-    free(arr);
     return 0;
 }
