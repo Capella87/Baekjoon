@@ -6,17 +6,16 @@
 
 int main(void)
 {
-    int input;
-    int count = 0;
-    
-    scanf("%d", &input);
-    while (input != 0)
+    int x, count = 0;
+
+    scanf("%d", &x);
+    while (x != 0)
     {
-        if (input % 2 == 1)
+        if (x & 1) // x의 마지막 이진수 자리가 1이면 센다.
             count++;
-        input /= 2;
+        x >>= 1; // 판별한 마지막 자리를 밀어서 제거 (right shift)
     }
-    printf("%d\n", count);
-    
+    printf("%d\n", count); // 이진수 값에서의 1의 값
+
     return 0;
 }
