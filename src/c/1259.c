@@ -4,13 +4,11 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 
 int main(void)
 {
     char input[6] = "";
     char* pos = NULL, * pos2 = NULL;
-    bool flag = false;
     size_t len;
 
     while (1)
@@ -19,16 +17,10 @@ int main(void)
         if (strcmp(input, "0") == 0) break;
         len = strlen(input);
         getchar();
-        flag = false;
         for (pos = input, pos2 = input + len - 1; pos < input + len / 2; pos++, pos2--)
-        {
             if (*pos != *pos2)
-            {
-                flag = true;
                 break;
-            }
-        }
-        printf("%s\n", flag == true ? "no" : "yes");
+        printf("%s\n", *pos != *pos2 ? "no" : "yes");
     }
 
     return 0;
