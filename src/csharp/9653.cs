@@ -2,13 +2,7 @@
 // https://www.acmicpc.net/problem/9653
 // 알고리즘 분류 : 구현
 
-// Considered as an Easter Egg in this repo.
-
-// 백준 9653번 문제 : 스타워즈 로고
-// https://www.acmicpc.net/problem/9653
-// 알고리즘 분류 : 구현
-
-// Considered as an Easter Egg in this repo.
+// Considered as an "Easter Egg" in this repo.
 
 using System;
 
