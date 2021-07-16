@@ -13,11 +13,9 @@ int main(void)
     int input;
 
     scanf("%d", &t);
-    getchar();
     for (int i = 0; i < t; i++)
     {
         scanf("%d", &input);
-        getchar();
         fm1 = 1, fm2 = 0, f = 0;
         for (int j = 1; j < input; j++)
         {
