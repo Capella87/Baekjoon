@@ -13,11 +13,8 @@ int main(void)
     int atot = 0, btot = 0;
 
     for (i = 0; i < 2; i++)
-    {
         for (j = 0; j < ROUND; j++)
             scanf("%d", &input[i][j]);
-        getchar();
-    }
     for (i = 0; i < ROUND; i++)
     {
         if (input[0][i] > input[1][i]) // A wins
@@ -51,6 +48,5 @@ int main(void)
             i--;
         printf("%c\n", result[i]);
     }
-    
     return 0;
 }
