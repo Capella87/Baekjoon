@@ -1,26 +1,31 @@
-// 백준 11655번 문제 : ROT13
-// https://www.acmicpc.net/problem/11655
-// 알고리즘 분류 : 구현, 문자열
+// 백준 17608번 문제 : 막대기
+// https://www.acmicpc.net/problem/17608
+// 알고리즘 분류 : 구현, 자료 구조, 스택
 
 #include <iostream>
-#include <string>
 #include <stack>
 using namespace std;
 
 int main()
 {
+    stack<int> stk;
+    int n, temp, count = 0;
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
-    stack<int> bar;
-    int n, input;
-    
+
     cin >> n;
     for (int i = 0; i < n; i++)
     {
-        cin >> input;
-        if (bar.empty() || !bar.empty() && bar.top() < input)
-            bar.push(input);
+        cin >> temp;
+        stk.push(temp);
     }
-    cout << bar.size() << '\n';
+    temp = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (temp < stk.top())
+            count++;
+        stk.pop();
+    }
+    cout << count << '\n';
     return 0;
 }
