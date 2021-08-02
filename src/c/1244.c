@@ -17,7 +17,6 @@ int main(void)
     int* swit = (int*)malloc(sizeof(int) * sCount);
     for (int i = 0; i < sCount; i++)
         scanf("%d", &swit[i]);
-    getchar();
     scanf("%d", &stuCount);
     for (int i = 0; i < stuCount; i++)
     {

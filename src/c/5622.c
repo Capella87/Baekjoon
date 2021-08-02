@@ -12,9 +12,6 @@ int main(void)
     int time = 0;
 
     scanf("%s", &input);
-    getchar();
-    
-
     for (i = 0; i < strlen(input); i++)
     {
         if (input[i] >= 'A' && input[i] <= 'C')
@@ -35,6 +32,5 @@ int main(void)
             time += 10;
     }
     printf("%d\n", time);
-
     return 0;
 }
