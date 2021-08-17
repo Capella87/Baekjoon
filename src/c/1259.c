@@ -14,14 +14,12 @@ int main(void)
     while (1)
     {
         scanf("%[^\n]", input);
+        getchar();
         if (strcmp(input, "0") == 0) break;
         len = strlen(input);
-        getchar();
         for (pos = input, pos2 = input + len - 1; pos < input + len / 2; pos++, pos2--)
-            if (*pos != *pos2)
-                break;
+            if (*pos != *pos2) break;
         printf("%s\n", *pos != *pos2 ? "no" : "yes");
     }
-
     return 0;
 }
