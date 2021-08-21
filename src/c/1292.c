@@ -8,7 +8,7 @@
 int main(void)
 {
     int arr[SIZE];
-    int num = 1, numBeginIdx = 0, total = 0, i = 0;
+    int num = 1, total = 0, i = 0;
     int start, end;
     
     scanf("%d %d", &start, &end);
