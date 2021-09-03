@@ -2,8 +2,6 @@
 // https://www.acmicpc.net/problem/9085
 // 알고리즘 분류 : 수학, 분할 정복을 이용한 거듭제곱
 
-// Commit for this file is postponed to review the problem.
-
 #include <stdio.h>
 typedef unsigned long long ulong64;
 
@@ -20,9 +18,9 @@ ulong64 dcPowRecursive(ulong64 base, ulong64 exponent)
             return (mid * mid) % diviend;
     }
 }
-// Remember properties of modulo operation.
-// Use ab mod n = ((a mod n)*(b mod n))mod n
-// Use (a mod n) mod n = a mod n
+// Apply properties of modulo operation in code.
+// Use: ab mod n = ((a mod n)*(b mod n))mod n
+// Use: (a mod n) mod n = a mod n
 int main(void)
 {
     ulong64 a, b;
