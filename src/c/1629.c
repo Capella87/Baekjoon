@@ -1,5 +1,5 @@
 // 백준 1629번 문제 : 곱셈
-// https://www.acmicpc.net/problem/9085
+// https://www.acmicpc.net/problem/1629
 // 알고리즘 분류 : 수학, 분할 정복을 이용한 거듭제곱
 
 #include <stdio.h>

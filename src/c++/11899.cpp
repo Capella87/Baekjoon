@@ -1,5 +1,5 @@
 // 백준 11899번 문제 : 괄호 끼워넣기
-// https://www.acmicpc.net/problem/12605
+// https://www.acmicpc.net/problem/11899
 // 알고리즘 분류 : 자료 구조, 문자열, 스택
 
 #include <iostream>
