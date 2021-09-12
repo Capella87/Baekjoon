@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(NULL); cout.tie(0);
     int t, n;
     string school, maxSchool;
     int count, maxCount;
@@ -33,6 +33,5 @@ int main()
         }
         cout << maxSchool << '\n';
     }
-
     return 0;
 }

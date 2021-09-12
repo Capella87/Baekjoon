@@ -5,7 +5,6 @@
 #include <iostream>
 #include <string>
 #include <iterator>
-
 using namespace std;
 
 string binaryOut(string&);
@@ -22,6 +21,8 @@ int main(void)
 
 string binaryOut(string& target)
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
     string::iterator i = target.begin();
     string result;
     const string bin[8]{ "0", "1", "10", "11", "100", "101", "110", "111" };
@@ -39,6 +40,5 @@ string binaryOut(string& target)
             result += "0";
         result += bin[ch];
     }
-
     return result;
 }

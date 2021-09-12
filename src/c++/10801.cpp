@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0); cout.tie(0);
 
     int a[10], b[10];
     int awin = 0, bwin = 0;
@@ -27,6 +27,5 @@ int main()
     if (awin > bwin) cout << "A\n";
     else if (awin < bwin) cout << "B\n";
     else cout << "D\n";
-
     return 0;
 }

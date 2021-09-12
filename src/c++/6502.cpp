@@ -7,6 +7,8 @@ using namespace std;
 
 int main(void)
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
     int r, w, l, count = 0;
 
     while (1)
@@ -20,8 +22,5 @@ int main(void)
         else
             cout << "Pizza " << ++count << " does not fit on the table.\n";
     }
-
     return 0;
 }
-
-// C언어의 scanf와 printf를 사용한 경우 지연시간은 없다. (cin, cout을 사용한 여기에서는 12ms)

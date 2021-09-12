@@ -23,6 +23,5 @@ int main()
     for (int i = 0; i < 26; i++)
         cout << abcStat[i] << ' ';
     cout << '\n';
-
     return 0;
 }

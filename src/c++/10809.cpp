@@ -5,11 +5,12 @@
 #include <iostream>
 #include <iterator>
 #include <string>
-
 using namespace std;
 
 int main(void)
 {
+    ios_base::sync_with_stdio(false);
+    cin.tie(0); cout.tie(0);
     string input;
     string::iterator i;
     char ch;
@@ -29,6 +30,5 @@ int main(void)
     for (int j = 0; j < 26; j++)
         cout << alphabet[j] << " ";
     cout << "\n";
-
     return 0;
 }
