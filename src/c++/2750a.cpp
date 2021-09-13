@@ -2,15 +2,16 @@
 // https://www.acmicpc.net/problem/2750
 // 알고리즘 분류 : 구현, 정렬
 
-#include <iostream>
+// Using bubble sort
 
+#include <iostream>
 using namespace std;
 
 int main()
 {
     int n, temp;
     ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0); cout.tie(0);
 
     cin >> n;
     int* arr = new int[n];
