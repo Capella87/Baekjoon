@@ -50,7 +50,6 @@ int main()
 
     getline(cin, compressedStr);
     int len = int(compressedStr.length());
-
     cout << getOrigLen(compressedStr, 0, len) << '\n';
     return 0;
 }
