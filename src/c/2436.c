@@ -3,15 +3,31 @@
 // 알고리즘 분류 : 수학, 정수론, 유클리드 호제법
 
 #include <stdio.h>
+typedef unsigned long long uint64;
 
-unsigned long long gcd(unsigned long long, unsigned long long);
+uint64 getGCD(uint64 a, uint64 b)
+{
+    return (a % b == 0) ? b : getGCD(b, a % b);
+}
 
 int main(void)
 {
-    unsigned long long 
-}
+    uint64 gcd, lcm;
 
-unsigned long long gcd(unsigned long long a, unsigned long long b)
-{
-    return b ? gcd(b, a % b) : a;
+    scanf("%llu %llu", &gcd, &lcm);
+    uint64 ta = gcd, tb = lcm, minSum = gcd + lcm;
+    uint64 comp = gcd * lcm;
+    for (uint64 i = gcd; i * i <= comp; i++)
+    {
+        if (comp % i) continue;
+        uint64 temp = comp / i;
+        if (getGCD(i, temp) == gcd && (temp + i) < minSum)
+        {
+            minSum = temp + i;
+            ta = i;
+            tb = temp;
+        }
+    }
+    printf("%d %d\n", ta, tb);
+    return 0;
 }
