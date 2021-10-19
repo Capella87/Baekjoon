@@ -5,12 +5,15 @@
 /bin/
 /cmake-build-debug/
 /Debug/
+/obj/
 /Release/
+/src/csharp/obj/
 /x64/
 
 # File Extensions
 *.com
 *.class
+*.csproj
 *.dll
 *.exe
 *.kdev4
@@ -27,4 +30,5 @@
 .Spotlight-V100
 .Trashes
 CMakeLists.txt
+Program.cs
 Thumbs.db
