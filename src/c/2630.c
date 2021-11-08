@@ -25,11 +25,11 @@ void origami(int** arr, int b_y, int b_x, int size)
             if (isDiff != arr[b_y + i][b_x + j])
             {
                 isDiff = arr[b_y + i][b_x + j];
-                break;
+                goto diff;
             }
         }
-        if (isDiff != origDiff) break;
     }
+diff:
     if (isDiff != origDiff)
     {
         int newSize = size / 2;
