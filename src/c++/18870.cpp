@@ -1,6 +1,6 @@
 // 백준 18870번 문제 : 좌표 압축
 // https://www.acmicpc.net/problem/18870
-// 알고리즘 분류 : 구현, 자료 구조, 시뮬레이션, 덱
+// 알고리즘 분류 : 정렬, 값 / 좌표 압축
 
 #include <iostream>
 #include <vector>
