@@ -20,6 +20,7 @@ void init_station(int* arr, const int init_count)
     for (int i = 0; i < init_count; i++)
     {
         line[arr[i]] = new station;
+        
         if (!i) // first
         {
             line[arr[i]]->next = arr[(i + 1) % init_count];
@@ -42,6 +43,7 @@ void init_station(int* arr, const int init_count)
 void construct(string& command, const int i, const int j)
 {
     line[j] = new station;
+
     if (command == "BN")
     {
         int nxt = line[i]->next;
@@ -85,7 +87,6 @@ void demolish(string& command, const int i)
         line[i]->prev = line[prv]->prev;
         delete[] line[prv];
         line[prv] = NULL;
-
     }
 }
 
