@@ -3,64 +3,66 @@
 // 알고리즘 분류 : 구현, 정렬
 
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <stdbool.h>
+#include <math.h>
 
-inline void swap(int* a, int* b)
+int arr[500000] = { 0, };
+int counting[8001] = { 0, };
+
+static inline void swap(int* a, int* b)
 {
     int temp = *a;
     *a = *b;
     *b = temp;
 }
 
-void heapify(int* arr, const int size, int target)
+void heapify(const int size, int target)
 {
-    int maxIdx = target;
-    int left = maxIdx * 2 + 1;
-    int right = maxIdx * 2 + 2;
+    int max_idx = target;
+    int left = max_idx * 2 + 1;
+    int right = max_idx * 2 + 2;
 
-    if (left < size && arr[maxIdx] < arr[left])
-        maxIdx = left;
-    if (right < size && arr[maxIdx] < arr[right])
-        maxIdx = right;
-    if (maxIdx != target)
+    if (left < size && arr[max_idx] < arr[left])
+        max_idx = left;
+    if (right < size && arr[max_idx] < arr[right])
+        max_idx = right;
+    if (max_idx != target)
     {
-        swap(&arr[maxIdx], &arr[target]);
-        heapify(arr, size, maxIdx);
+        swap(&arr[max_idx], &arr[target]);
+        heapify(size, max_idx);
     }
     return;
 }
 
-void heapSort(int* arr, const int size)
+void heap_sort(const int size)
 {
     for (int i = size / 2 - 1; i >= 0; i--)
-        heapify(arr, size, i);
+        heapify(size, i);
     for (int i = size - 1; i >= 0; i--)
     {
         swap(&arr[0], &arr[i]);
-        heapify(arr, i, 0);
+        heapify(i, 0);
     }
     return;
 }
 
 int mode(int* carr)
 {
-    int maxCount = 0;
+    int max_count = 0;
     int mode;
-    bool isDup = false;
+    bool is_dup = false;
     for (int i = 0; i <= 8000; i++)
     {
-        if (maxCount < carr[i])
+        if (max_count < carr[i])
         {
-            maxCount = carr[i];
+            max_count = carr[i];
             mode = i - 4000;
-            isDup = false;
+            is_dup = false;
         }
-        else if (maxCount && maxCount == carr[i] && !isDup)
+        else if (max_count && max_count == carr[i] && !is_dup)
         {
             mode = i - 4000;
-            isDup = true;
+            is_dup = true;
         }
     }
     return mode;
@@ -70,23 +72,22 @@ int main(void)
 {
     int n;
     double total = 0.0;
+    bool is_dup = false, is_positive = false;
 
     scanf("%d", &n);
-    int* arr = (int*)malloc(sizeof(int) * n);
-    int* counting = (int*)malloc(sizeof(int) * 8001);
-    memset(counting, 0, 8001 * sizeof(int));
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
         total += (double)arr[i];
         counting[arr[i] + 4000]++;
     }
-    printf("%.0lf\n", total / n);
-    heapSort(arr, n);
+
+    double avg_result = round(total / n) + 0.0;
+    printf("%.lf\n", avg_result);
+    heap_sort(n);
     printf("%d\n", arr[n / 2]);
     printf("%d\n", mode(counting));
     printf("%d\n", arr[n - 1] - arr[0]);
-    free(arr);
-    free(counting);
+
     return 0;
 }
