@@ -2,6 +2,8 @@
 // https://www.acmicpc.net/problem/1662
 // 알고리즘 분류 : 자료 구조, 스택, 재귀
 
+// Recursive code
+
 #include <iostream>
 #include <stack>
 #include <string>
