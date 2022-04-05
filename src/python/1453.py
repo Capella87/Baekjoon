@@ -1,4 +1,3 @@
-
 # 백준 1453번 문제 : 피시방 알바
 # https://www.acmicpc.net/problem/1453
 # 알고리즘 분류 : 구현
