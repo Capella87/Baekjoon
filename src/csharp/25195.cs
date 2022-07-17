@@ -30,7 +30,6 @@ namespace YesOrYes
             foreach (var a in goms)
                 _isFan[a] = true;
 
-
             bool mustGom = false;
             _isVisited = new bool[_info[0] + 1];
 
@@ -54,9 +53,7 @@ namespace YesOrYes
                 foreach (var d in _nodes[cur])
                 {
                     if (!_isFan[d] && !_isVisited[d])
-                    {
                         q.Enqueue(d);
-                    }
                     else if (_isFan[d] && !_isVisited[d])
                         mustGom = true;
                 }
