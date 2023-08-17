@@ -6,4 +6,9 @@
 * C++
 * C#
 * Python
-* 기타 등등
+* Java
+
+## 향후 사용할 수도 있는 언어
+* Rust
+* Go
+* Zig
