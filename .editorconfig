@@ -2,8 +2,11 @@ root = true
 
 [*]
 charset = utf-8
-indent_size = 4
 indent_style = space
-
-[*.py]
 insert_final_newline = true
+
+[*.{cs,py,c,cpp,rst,go,zig,lua}]
+indent_size = 4
+
+[*.{js,ts,jsx}]
+indent_size = 2
