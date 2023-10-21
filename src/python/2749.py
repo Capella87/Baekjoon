@@ -1,5 +1,5 @@
 # 백준 2749번 문제 : 피보나치 수 3
-# https://www.acmicpc.net/problem/16940
+# https://www.acmicpc.net/problem/2749
 # 알고리즘 분류 : 수학, 분할 정복을 이용한 거듭제곱
 
 '''
