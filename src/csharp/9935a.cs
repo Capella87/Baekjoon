@@ -6,25 +6,24 @@
 
 using System.Text;
 
-var strInput = Console.ReadLine();
-char[] finStrInput = strInput.ToCharArray();
-char[] bombKeyword = Console.ReadLine().ToCharArray();
-int bombIdx = 0, tempIdx;
+string strInput = Console.ReadLine();
+string bombKeyword = Console.ReadLine();
+int bombIdx = 0;
 var buff = new StringBuilder();
-var bombStack = new Stack<(int bombIdx, int idx)>();
+var bombStack = new Stack<int>();
 
 for (int i = 0; i < strInput.Length; i++)
 {
+    buff.Append(strInput[i]);
+
     // Init or reset
     if (strInput[i] == bombKeyword[0])
     {
-        bombStack.Push((0, i));
+        bombStack.Push(0);
         bombIdx = 1;
     }
     else if (strInput[i] == bombKeyword[bombIdx])
-    {
-        bombStack.Push((bombIdx++, i));
-    }
+        bombStack.Push(bombIdx++);
     else
     {
         bombStack.Clear();
@@ -35,22 +34,12 @@ for (int i = 0; i < strInput.Length; i++)
     if (bombIdx == bombKeyword.Length)
     {
         for (int j = 0; j < bombKeyword.Length; j++)
-        {
-            tempIdx = bombStack.Pop().idx;
-            finStrInput[tempIdx] = '\0';
-        }
+            bombStack.Pop();
 
-        bombIdx = bombStack.Count > 0 ? bombStack.Peek().bombIdx + 1 : 0;
+        buff.Remove(buff.Length - bombIdx, bombIdx);
+        bombIdx = bombStack.Count > 0 ? bombStack.Peek() + 1 : 0;
     }
 }
 
-for (int i = 0; i < strInput.Length; i++)
-{
-    if (finStrInput[i] == '\0') continue;
-    buff.Append(finStrInput[i]);
-}
-
-if (buff.Length > 0)
-    Console.WriteLine(buff.ToString());
-else
-    Console.WriteLine("FRULA");
+if (buff.Length > 0) Console.WriteLine(buff.ToString());
+else Console.WriteLine("FRULA");
