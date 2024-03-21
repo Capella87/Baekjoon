@@ -16,14 +16,18 @@ for (int i = 0; i < strInput.Length; i++)
 {
     buff.Append(strInput[i]);
 
-    // Init or reset
+    // Init or reset; Note: If there is ongoing bomb keyword and strInput[i] is the first character of the keyword,
+    // bombIdx is reset to 0, but the stack is NOT cleared.
     if (strInput[i] == bombKeyword[0])
     {
         bombStack.Push(0);
         bombIdx = 1;
     }
+    // Ongoing bomb keyword and order is correct.
     else if (strInput[i] == bombKeyword[bombIdx])
         bombStack.Push(bombIdx++);
+    // Clear the stack if strInput[i] is NOT keyword characters at all
+    // or wrong order (e.g. keyword is "asdf", but previous characters are "as" and strInput[i] is "f")
     else
     {
         bombStack.Clear();
@@ -31,12 +35,17 @@ for (int i = 0; i < strInput.Length; i++)
         continue;
     }
 
+    // Activate the bomb if the bomb word is fully matched
+    // Note: This checks the bomb keyword (trigger) every time regardless of the characters match
     if (bombIdx == bombKeyword.Length)
     {
+        // Pop the keyword
         for (int j = 0; j < bombKeyword.Length; j++)
             bombStack.Pop();
 
         buff.Remove(buff.Length - bombIdx, bombIdx);
+
+        // Check the previous ongoing 'bomb' and ready to continue matching
         bombIdx = bombStack.Count > 0 ? bombStack.Peek() + 1 : 0;
     }
 }
