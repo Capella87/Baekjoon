@@ -5,12 +5,12 @@
 * C
 * C++
 * C#
+* Go
 * Java
 * Python
 
 ## 향후 사용할 수도 있는 언어
 * Rust
-* Go
 * Zig
 * Lua
 
