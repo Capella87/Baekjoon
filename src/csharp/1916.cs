@@ -1,6 +1,8 @@
-// 백준 13549번 문제 : 최소비용 구하기
+// 백준 1916번 문제 : 최소비용 구하기
 // https://www.acmicpc.net/problem/1916
 // 알고리즘 분류 : 그래프 이론, 데이크스트라, 최단 경로
+
+// Dijkstra's algorithm
 
 int n = int.Parse(Console.ReadLine());
 int m = int.Parse(Console.ReadLine());
