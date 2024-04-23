@@ -23,10 +23,11 @@ int main()
     for (int i = 0; i < n; i++)
         cin >> weight[i] >> value[i];
 
-    for (int i = 1; i <= LEN; i++)
+    for (int i = 0; i < LEN; i++)
+        // Get the maximum sum of values at each weight limit with current item
         for (int w = k; w >= 0; w--)
-            if (weight[i - 1] <= w)
-                cache[w] = MAX(cache[w], cache[w - weight[i - 1]] + value[i - 1]);
+            if (weight[i] <= w)
+                cache[w] = MAX(cache[w], cache[w - weight[i]] + value[i]);
     cout << cache[k] << '\n';
 
     return 0;
