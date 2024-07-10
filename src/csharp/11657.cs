@@ -2,8 +2,11 @@
 // https://www.acmicpc.net/problem/11657
 // 알고리즘 분류 : 그래프 이론, 최단 경로, 벨만-포드
 
+// Bellman-Ford Algorithm
+
 using System.Text;
 
+// conditions[0] for N, conditions[1] for M
 var conditions = Array.ConvertAll<string, int>(Console.ReadLine().Split(), int.Parse);
 var distances = new long[conditions[0] + 1];
 Array.Fill(distances, int.MaxValue);
@@ -17,6 +20,7 @@ for (int i = 0; i < conditions[1]; i++)
     edges.Add((temp[0], temp[1], temp[2]));
 }
 
+// Relaxation
 for (int i = 1; i < conditions[0]; i++)
 {
     foreach (var edge in edges)
