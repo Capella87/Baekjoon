@@ -11,9 +11,5 @@
 * Lua
 * Python
 
-## 향후 사용할 수도 있는 언어
-
-* Rust
-
 ---
-Copyright © 2020-2024 Capella87
+Copyright © 2020-2025 Capella87
